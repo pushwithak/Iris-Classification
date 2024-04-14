@@ -64,7 +64,7 @@ To run this application locally, follow these steps:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/iris-classification.git](https://github.com/pushwithak/Iris-Classification.git)
+   git clone https://github.com/pushwithak/Iris-Classification.git
    ```
 2. Install the required Python packages:
    ```bash
