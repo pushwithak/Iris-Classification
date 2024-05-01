@@ -4,10 +4,9 @@ import pandas as pd
 
 #reading the encoder, model and scaler object files
 encoder = pickle.load(open("encoder.pkl", 'rb'))
-# model = pickle.load(open("model.pkl", 'rb'))
-import pickle
-with open('model.pkl', 'wb') as f:
-    pickle.dump(model, f, protocol=pickle.HIGHEST_PROTOCOL)
+model = pickle.load(open("model.pkl", 'rb'))
+# with open('model.pkl', 'wb') as f:
+#     pickle.dump(model, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 scaler = pickle.load(open("scaler.pkl", 'rb'))
 
