@@ -3,12 +3,17 @@ import pickle
 import pandas as pd
 
 #reading the encoder, model and scaler object files
-encoder = pickle.load(open("encoder.pkl", 'rb'))
-model = pickle.load(open("model.pkl", 'rb'))
-# with open('model.pkl', 'wb') as f:
-#     pickle.dump(model, f, protocol=pickle.HIGHEST_PROTOCOL)
+# encoder = pickle.load(open("encoder.pkl", 'rb'))
+# model = pickle.load(open("model.pkl", 'rb'))
+# scaler = pickle.load(open("scaler.pkl", 'rb'))
 
-scaler = pickle.load(open("scaler.pkl", 'rb'))
+try:
+    encoder = pickle.load(open("encoder.pkl", 'rb'))
+    model = pickle.load(open("model.pkl", 'rb'))
+    scaler = pickle.load(open("scaler.pkl", 'rb'))
+except Exception as e:
+    st.error(f"Failed to load model components: {e}")
+
 
 #setting the title and text
 st.title("Iris Flower Classification")
